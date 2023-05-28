@@ -36,3 +36,12 @@ python homework/train.py
 python homework/hpo.py
 python homework/register_model.py 
 ```
+
+5. If you occasionaly deleted an experiment, you can restore it using `MLflowClient`:
+```python
+from mlflow.tracking import MlflowClient
+
+client = MlflowClient()
+# client.delete_experiment(1)
+client.restore_experiment(1)
+```
