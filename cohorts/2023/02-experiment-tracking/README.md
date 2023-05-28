@@ -46,7 +46,7 @@ client = MlflowClient()
 client.restore_experiment(1)
 ```
 
-### Remote Configure
+### Remote Configuration
 
 Unfortunatelly AWS or Google Cloud are not available in my country, so I will use Yandex.Cloud.
 
@@ -57,8 +57,8 @@ Unfortunatelly AWS or Google Cloud are not available in my country, so I will us
    - `mlflowpass` – password.
 3. Create Bucket in Object Storage (it's not allowed to create a bucket named `mlflow-artifacts`).
 4. Create Service Account for S3 bucket with permissions: `storage.viewer`, `storage.uploader`.
-5. Configure MLflow connection according to `.env.example`. [See](
-https://cloud.yandex.ru/docs/storage/tools/boto) boto3 configuration instruction.
+5. Configure [S3 connection](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables) for MLflow according to `.env.example`. [See](
+https://cloud.yandex.ru/docs/storage/tools/boto) boto3 configuration instruction fot Yandex.Cloud.
 6. Run MLflow on VM:
 ```bash
 # change db_endpoint according to your configuration
