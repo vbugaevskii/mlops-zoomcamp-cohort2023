@@ -1,0 +1,8 @@
+mlflow
+numpy
+pandas
+scipy
+scikit-learn
+optuna
+click
+python-dotenv
