@@ -38,4 +38,4 @@ prefect block register -m prefect_email
 - https://help.mail.ru/mail/mailer/popsmtp
 - https://help.mail.ru/mail/security/protection/external
 - https://yandex.ru/support/mail/mail-clients/others.html
-- https://support.google.com/accounts/answer/185833?visit_id=638221951264450682-938214284&p=InvalidSecondFactor&rd=1
+- https://support.google.com/accounts/answer/185833
