@@ -1,0 +1,55 @@
+###
+### A complete description of a Prefect Deployment for flow 'main-flow'
+###
+name: main_flow_feb
+description: The main training pipeline
+version: 62ea03d2314c8175e3018910ab34b424
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: default-agent-pool
+tags: []
+parameters:
+  train_path: ./data/green_tripdata_2023-02.parquet
+  val_path: ./data/green_tripdata_2023-03.parquet
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: main-flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: a80f5b48-ca58-4885-a75e-d8fd54c5d675
+  _block_document_name: anonymous-73afe70a-5001-465a-9261-13435452d714
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: /Users/vladimir/Documents/mlops-zoomcamp-cohort2023/cohorts/2023/03-orchestration/prefect-solution
+entrypoint: flows/orchestrate.py:main_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    train_path:
+      title: train_path
+      default: ./data/green_tripdata_2021-01.parquet
+      position: 0
+      type: string
+    val_path:
+      title: val_path
+      default: ./data/green_tripdata_2021-02.parquet
+      position: 1
+      type: string
+  required: null
+  definitions: null
+timestamp: '2023-06-12T18:41:35.267336+00:00'
